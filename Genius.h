@@ -24,6 +24,6 @@
 -(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;
 -(void) addJogador: (Jogador *) j;
-
+-(NSString *) gerarCor;
 
 @end
