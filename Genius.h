@@ -21,9 +21,9 @@
 @property NSArray * cores;
 @property NSArray * sequencia;
 
--(void) CriarSequencia : (NSString *)cor;
+//-(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;
 -(void) addJogador: (Jogador *) j;
-
+-(NSString *) gerarCor;
 
 @end
