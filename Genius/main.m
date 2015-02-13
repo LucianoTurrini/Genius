@@ -34,10 +34,10 @@ int main(int argc, const char * argv[]) {
                 //implement
                 break;
             default:
-                NSLog (@"A opção não existe!");
+                printf("\n\nA opção não existe!\n\n");
                 break;
         }
        
     }
-    //return 0;
+    return 0;
 }
