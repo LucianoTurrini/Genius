@@ -25,10 +25,26 @@
 
 -(void) CriarSequencia : (NSArray *)cor{
     [sequencia addObject: cor];
+    
+    //Completar
 }
 
 -(void) ExibirRanking{
     NSMutableArray *ranking;
+    
+    for (Jogador *j in jogadores) {
+        
+        //Ordenar aqui
+        
+    }
+    
+    //Lista o ranking
+    for (Jogador *j in ranking) {
+        
+        NSLog(@"Jogador: %@; %d pontos \n ", [j nome], [j melhorPont]);
+        
+        
+    }
     
     //Completar
     

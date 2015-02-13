@@ -11,10 +11,12 @@
 @interface Jogador : NSObject
 {
     int melhorPont, qtdJogadas, pontAtual;
+    NSString *nome;
     
 }
 
 @property int melhorPont, qtdJogadas, pontAtual;
+@property NSString *nome;
 
 
 
