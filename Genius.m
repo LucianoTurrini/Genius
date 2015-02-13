@@ -23,14 +23,32 @@
     return self;
 }
 
--(void) CriarCores : (NSArray *)cor{
-    // randomico
-    //[sequencia addObject: cor];
+-(void) addCor{
+    
+    [sequencia addObject: [self gerarCor]];
+    
+    for (NSObject *j in sequencia) {
+        //Exibe as cores
+        NSLog(@"%@; ", j);
+    }
+    
+    [NSThread sleepForTimeInterval:2.0]; //Delay
+    
+    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+    
+    //Completar
+    
+    
 }
 
--(void) CriarSequencia : (NSArray *)cor{
-    // randomico
-    //[sequencia addObject: cor];
+-(NSString *) gerarCor{
+    NSString *cor;
+    
+    //Cor aleatória
+    //Fazer
+    
+    return cor;
 }
 
 -(void) ExibirRanking{

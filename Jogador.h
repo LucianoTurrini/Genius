@@ -10,6 +10,7 @@
 
 @interface Jogador : NSObject
 {
+    NSString *nome;
     int melhorPont;
     int qtdJogadas;
     int pontAtual;
@@ -19,6 +20,7 @@
 @property int melhorPont;
 @property int qtdJogadas;
 @property int pontAtual;
+@property NSString *nome;
 
 
 
