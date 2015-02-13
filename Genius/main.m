@@ -10,8 +10,29 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        int opcao;
+        NSLog(@"\n1)Cadastrar usuario\n\n2)Jogar\n\n0)Sair do Jogo\n\nEntre com o número opcão desejada:" );
+        
+        
+        scanf ("%i", &opcao);
+        
+        switch (opcao)
+        {
+            case 0:
+                NSLog (@"zero");
+                break;
+            case 1:
+                NSLog (@"one");
+                break;
+            case 2:
+                NSLog (@"two");
+                break;
+            default:
+                NSLog (@"Integer out of range");
+                break;
+        }
+       
     }
     return 0;
 }
