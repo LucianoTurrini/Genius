@@ -13,21 +13,29 @@
 @synthesize cores;
 @synthesize sequencia;
 
-
--(void) setCores{
-    
+-(instancetype) init{
+    self = [super init];
+    if(self){
+        
+        gameOver = false;
+        
+    }
+    return self;
 }
 
 -(void) CriarSequencia : (NSArray *)cor{
-    
+    [sequencia addObject: cor];
 }
 
 -(void) ExibirRanking{
+    NSMutableArray *ranking;
+    
+    //Completar
     
 }
 
 -(void) addJogador: (Jogador *) j{
-    
+    [jogadores addObject: j];
 }
 
   

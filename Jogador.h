@@ -10,9 +10,13 @@
 
 @interface Jogador : NSObject
 {
-    int melhorPont, qtdJogadas;
+    int melhorPont, qtdJogadas, pontAtual;
+    
 }
 
-@property int melhorPont, qtdJogadas;
+@property int melhorPont, qtdJogadas, pontAtual;
+
+
+
 
 @end

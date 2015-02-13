@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
+//#import "stdio.h"
 
 @interface Genius : NSObject
 {
     NSArray *cores;
-    NSArray *sequencia;
-    NSArray *jogadores;
+    NSMutableArray *sequencia;
+    NSMutableArray *jogadores;
+    bool gameOver;
 }
 
 @property NSArray * cores;

@@ -12,7 +12,12 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         int opcao;
-        NSLog(@"\n1)Cadastrar usuario\n\n2)Jogar\n\n0)Sair do Jogo\n\nEntre com o número opcão desejada:" );
+        
+        //NSLog(@"\n\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 0)Sair do Jogo \n\n Entre com o número opcão desejada: " );
+        
+        
+        //Exibe menu
+        printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 0)Sair do Jogo \n\n Entre com o número opcão desejada: " );
         
         //Pegar Opção do Usuario e mandar para o Switch-Case
         scanf ("%i", &opcao);
@@ -37,5 +42,5 @@ int main(int argc, const char * argv[]) {
         }
        
     }
-    return 0;
+    //return 0;
 }
