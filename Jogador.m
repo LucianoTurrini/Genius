@@ -10,4 +10,11 @@
 
 @implementation Jogador
 
+@synthesize melhorPont, qtdJogadas;
+
+
+
+
 @end
+
+

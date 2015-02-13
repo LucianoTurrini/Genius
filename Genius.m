@@ -9,20 +9,26 @@
 #import "Genius.h"
 
 @implementation Genius
+
 @synthesize cores;
 @synthesize sequencia;
 
 
 -(void) setCores{
     
-   
 }
-
 
 -(void) CriarSequencia : (NSArray *)cor{
     
 }
 
+-(void) ExibirRanking{
+    
+}
+
+-(void) addJogador: (Jogador *) j{
+    
+}
 
   
 @end

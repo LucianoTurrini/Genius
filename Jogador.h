@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Jogador : NSObject
+{
+    int melhorPont, qtdJogadas;
+}
+
+@property int melhorPont, qtdJogadas;
 
 @end
