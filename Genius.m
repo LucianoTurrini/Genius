@@ -19,7 +19,7 @@
 }
 
 
--(void) CriarSequencia : (NSString *)cor{
+-(void) CriarSequencia : (NSArray *)cor{
     
 }
 

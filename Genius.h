@@ -15,8 +15,8 @@
     
 }
 
-@property NSString * cores;
-@property NSString * sequencia;
+@property NSArray * cores;
+@property NSArray * sequencia;
 
 -(void) CriarSequencia : (NSString *)cor;
 
