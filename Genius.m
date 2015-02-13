@@ -23,8 +23,14 @@
     return self;
 }
 
+-(void) CriarCores : (NSArray *)cor{
+    // randomico
+    //[sequencia addObject: cor];
+}
+
 -(void) CriarSequencia : (NSArray *)cor{
-    [sequencia addObject: cor];
+    // randomico
+    //[sequencia addObject: cor];
 }
 
 -(void) ExibirRanking{

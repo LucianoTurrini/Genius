@@ -12,10 +12,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         int opcao;
-        
-        //NSLog(@"\n\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 0)Sair do Jogo \n\n Entre com o número opcão desejada: " );
-        
-        
+    
         //Exibe menu
         printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 0)Sair do Jogo \n\n Entre com o número opcão desejada: " );
         
@@ -37,7 +34,7 @@ int main(int argc, const char * argv[]) {
                 //implement
                 break;
             default:
-                NSLog (@"Integer out of range");
+                NSLog (@"A opção não existe!");
                 break;
         }
        

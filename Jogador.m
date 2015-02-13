@@ -10,7 +10,9 @@
 
 @implementation Jogador
 
-@synthesize melhorPont, qtdJogadas, pontAtual;
+@synthesize melhorPont;
+@synthesize qtdJogadas;
+@synthesize pontAtual;
 
 
 
