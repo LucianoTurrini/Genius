@@ -9,5 +9,20 @@
 #import "Genius.h"
 
 @implementation Genius
+@synthesize cores;
+@synthesize sequencia;
+
+
+-(void) setCores{
+    
+   
+}
+
+
+-(void) CriarSequencia : (NSString *)cor{
+    
+}
+
+
   
 @end

@@ -9,5 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface Genius : NSObject
+{
+    NSArray * cores;
+    NSArray * sequencia;
+    
+}
+
+@property NSString * cores;
+@property NSString * sequencia;
+
+-(void) CriarSequencia : (NSString *)cor;
 
 @end

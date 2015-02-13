@@ -14,19 +14,22 @@ int main(int argc, const char * argv[]) {
         int opcao;
         NSLog(@"\n1)Cadastrar usuario\n\n2)Jogar\n\n0)Sair do Jogo\n\nEntre com o número opcão desejada:" );
         
-        
+        //Pegar Opção do Usuario e mandar para o Switch-Case
         scanf ("%i", &opcao);
         
         switch (opcao)
         {
             case 0:
-                NSLog (@"zero");
+                //implement
                 break;
             case 1:
-                NSLog (@"one");
+                //implement
                 break;
             case 2:
-                NSLog (@"two");
+                //implement
+                break;
+            case 3:
+                //implement
                 break;
             default:
                 NSLog (@"Integer out of range");
