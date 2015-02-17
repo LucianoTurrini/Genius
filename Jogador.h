@@ -24,7 +24,7 @@
 @property NSNumber *pontAtual;
 @property NSString *nome;
 
--(id)initWithTIA:(NSUInteger)tia nome:(NSString *)n;
+-(id)initWithPont:(NSNumber *)mP qtdJogadas:(NSNumber *)qtdJo pontAtual:(NSNumber *)pontA nome:(NSString *)n;
 
 
 @end
