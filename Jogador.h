@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface Jogador : NSObject
 {
     NSString *nome;
