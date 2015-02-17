@@ -15,6 +15,19 @@
 @synthesize qtdJogadas;
 @synthesize pontAtual;
 
+-(id)initWithPont:(NSNumber *)mP qtdJogadas:(NSNumber *)qtdJo pontAtual:(NSNumber *)pontA nome:(NSString *)n{
+    self = [super init];
+    
+    if(self){
+        qtdJogadas = qtdJo;
+        melhorPont = mP;
+        pontAtual = pontA;
+        nome = n;
+    }
+    
+    return self;
+}
+
 
 
 

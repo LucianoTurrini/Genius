@@ -13,18 +13,18 @@
 @interface Jogador : NSObject
 {
     NSString *nome;
-    int melhorPont;
-    int qtdJogadas;
-    int pontAtual;
+    NSNumber *melhorPont;
+    NSNumber *qtdJogadas;
+    NSNumber *pontAtual;
     
 }
 
-@property int melhorPont;
-@property int qtdJogadas;
-@property int pontAtual;
+@property NSNumber *melhorPont;
+@property NSNumber *qtdJogadas;
+@property NSNumber *pontAtual;
 @property NSString *nome;
 
-
+-(id)initWithTIA:(NSUInteger)tia nome:(NSString *)n;
 
 
 @end
