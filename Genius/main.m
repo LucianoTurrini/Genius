@@ -80,7 +80,7 @@ int main(int argc, const char * argv[]) {
                 break;
             default:
                 
-                NSLog (@"Esse número não é válido, digite um numero válido");
+                NSLog (@"Esse opção não existe, digite um numero válido");
                 
         }
        
