@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
+#import "Genius.h"
+#import "Fila.h"
 
 
     void ExibeMenu()
 {
     
         printf("#############GENIUS###############\n");
-        printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 0)Sair do Jogo" );
+        printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 3)Exibir Ranking \n\n 0)Sair do Jogo" );
         printf("\n\n#################################\n");
         printf("\nEntre com o número da opcão desejada:");
     
@@ -31,12 +33,16 @@ void ClearTerminal()
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        char str[50] = {0};                  // init all to 0
+        Jogador *jogador = [[Jogador alloc] init];
+        Genius *jogo = [[Genius alloc] init];
+        
+        
+        char str[50] = {0}; // init all to 0
         // you can create an NS foundation NSString object from the str buffer
         NSString *Nome;
         
         int opcao;
-        Jogador *jogador = [[Jogador alloc] init];
+        
         do {
         //Exibe menu
         ExibeMenu();
@@ -52,24 +58,25 @@ int main(int argc, const char * argv[]) {
                 
             case 1:
                 do {
-                NSLog(@"Qual será o nome do seu usuário?");
+                printf("Digite um nome para o usuário.");
+                printf("\nNome:");
                 scanf("%s", str); // read and format into the str buffer
                 Nome = [NSString stringWithUTF8String:str];
-                NSLog(@"Seu nome é %@ ?",Nome );
+                printf("Seu nome é %s ?\n", [Nome UTF8String]);
                 printf("1) Sim \n2) Não\n");
                 scanf("%i",&opcao);
                 jogador = [[Jogador alloc] initWithPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
                 } while ( opcao >=2);
-
+                [jogo addJogador:jogador];
                 ClearTerminal();
                 break;
                 
             case 2:
-                
+                ClearTerminal();
                 break;
                 
             case 3:
-                ClearTerminal();
+                [jogo ExibirRanking];
                 break;
             default:
                 
