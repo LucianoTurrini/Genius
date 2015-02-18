@@ -87,6 +87,7 @@ int main(int argc, const char * argv[]) {
             default:
                 
                 NSLog (@"Esse opção não existe, digite um numero válido");
+                break;
                 
         }
             
