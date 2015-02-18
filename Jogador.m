@@ -28,7 +28,12 @@
     return self;
 }
 
-
+-(void) ExibirInf {
+    printf("Nome: %s\n", [nome UTF8String]);
+    printf("Melhor Pontuação : %s\n", [[melhorPont stringValue]lossyCString]);
+    printf("Número de Jogadas : %s\n", [[qtdJogadas stringValue]lossyCString]);
+    printf("Pontuação Atual : %s\n", [[pontAtual stringValue]lossyCString]);
+}
 
 
 @end
