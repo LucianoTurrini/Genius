@@ -22,6 +22,10 @@
 @property NSArray * sequencia;
 @property NSMutableArray *jogadores;
 
+-(NSString *)randomColour;
+-(void)playTutorial;
+-(void)start;
+
 -(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Genius.h"
 #import "Jogador.h"
 #import "Genius.h"
 #import "Fila.h"
@@ -33,7 +34,6 @@ int main(int argc, const char * argv[]) {
         
         Jogador *jogador = [[Jogador alloc] init];
         Genius *jogo = [[Genius alloc] init];
-        
         
         char str[50] = {0}; // init all to 0
         // you can create an NS foundation NSString object from the str buffer
@@ -71,8 +71,8 @@ int main(int argc, const char * argv[]) {
                 
             case 2:
                 ClearTerminal();
+                [jogo playTutorial];
                 break;
-                
             case 3:
                 [jogo ExibirRanking];
                 break;
