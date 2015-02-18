@@ -24,7 +24,7 @@
 @property NSNumber *pontAtual;
 @property NSString *nome;
 
--(Jogador*) initWithmelhorPont:(NSNumber*)mP qtdJogadas:(NSNumber*)qtdJo pontAtual:(NSNumber*)pontA nome:(NSString*)n;
+-(id) initWithmelhorPont:(NSNumber*)mP qtdJogadas:(NSNumber*)qtdJo pontAtual:(NSNumber*)pontA nome:(NSString*)n;
 
 
 @end
