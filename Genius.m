@@ -16,11 +16,7 @@
 
 -(id) initWithJogadores: (NSMutableArray *)jo {
     self = [super init];
-    if(self){
-        
-        jogadores = jo;
-        
-    }
+    jogadores = [[NSMutableArray alloc]init];
     return self;
 }
 

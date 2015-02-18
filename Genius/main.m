@@ -67,7 +67,6 @@ int main(int argc, const char * argv[]) {
                     jogador = [[Jogador alloc] initWithmelhorPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
                 } while ( opcao >=2);
                 [jogo addJogador:jogador];
-                NSLog( @"%lu", (unsigned long)[jogo.jogadores count] );
                 ClearTerminal();
                 break;
                 
