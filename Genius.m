@@ -127,8 +127,8 @@
     return colour;
 }
 
--(BOOL)try:(NSMutableArray *)sequencia {    //O que é aqui?
-    return false;
+-(BOOL)try:(NSMutableArray *)sequencia {
+    return true;
 }
 
 -(void)start {
@@ -172,6 +172,11 @@
     
     //Lista o Ranking
     int n = [jogadores count];
+    
+    
+    //Ordenação aqui
+    
+    
     for(int i=0; i < n; i++) {
     Jogador *aux = [jogadores objectAtIndex: i];
         [aux ExibirRanking];
