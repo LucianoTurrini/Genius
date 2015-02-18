@@ -24,6 +24,8 @@
 -(id) initWithJogadores: (NSMutableArray *)jo;
 -(NSString *)randomColour;
 -(void)playTutorial;
+-(void)showColour;
+-(void)clear;
 -(void)start;
 
 -(void) CriarCores;

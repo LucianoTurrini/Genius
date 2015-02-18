@@ -35,8 +35,7 @@ int main(int argc, const char * argv[]) {
         Jogador *jogador = [[Jogador alloc] init];
         Genius *jogo = [[Genius alloc] init];
         
-        char str[50] = {0}; // init all to 0
-        // you can create an NS foundation NSString object from the str buffer
+        char str[50] = {0};
         NSString *Nome;
         
         int opcao;

@@ -46,21 +46,23 @@
 -(void)playTutorial {
     printf("##################################\r\n");
     printf("                                  \r\n");
-    printf("Antes de tudo, ajuste sua janela  \r\n");
-    printf("de acordo com os limites dessa    \r\n");
-    printf("tela.                             \r\n");
     printf("Uma sequência de cores aparecerá  \r\n");
     printf("aleatóriamente na tela. Começando \r\n");
     printf("com 5 cores e avançando até onde  \r\n");
-    printf("suas habilidades Jedi o levarem   \r\n");
+    printf("suas habilidades Jedi o levarem...\r\n");
     printf("                                  \r\n");
-    printf("Depois disso, tente reproduzir na \r\n");
-    printf("mesma ordem usando os números:    \r\n");
+    printf("Depois disso, tente reproduzir a  \r\n");
+    printf("mesma ordem usando os números para\r\n");
+    printf("indicar as cores:                 \r\n");
+    printf("                                  \r\n");
     printf("\t1 - AZUL                        \r\n");
     printf("\t2 - AMARELO                     \r\n");
     printf("\t3 - VERDE                       \r\n");
     printf("\t4 - VERMELHO                    \r\n");
     printf("                                  \r\n");
+    printf("Para uma melhor experiência,      \r\n");
+    printf("ajuste sua janela de acordo com os\r\n");
+    printf("limites dessa tela.               \r\n");
     printf("Boa sorte!                        \r\n");
     printf("                                  \r\n");
     printf("##################################\r\n");
@@ -88,8 +90,35 @@
     return colour;
 }
 
--(void)start {
+-(void)clear {
+    for (int i = 0; i < 100; i++) {
+        printf("\n");
+    }
+}
+
+-(void)showColour {
+    printf("##################################\r\n");
+    printf("                                  \r\n");
+    printf("                                  \r\n");
+    printf("                                  \r\n");
+    printf("\t%s\r\n", [[self randomColour] UTF8String]);
+    printf("                                  \r\n");
+    printf("                                  \r\n");
+    printf("                                  \r\n");
+    printf("##################################\r\n");
     
+    
+}
+
+-(void)start {
+    int turns = 5; // They also represent user points.
+    
+    do {
+        [self clear];
+        [self showColour];
+        [NSThread sleepForTimeInterval:0.5];
+        
+    } while (gameOver == false);
 }
 
 -(void) ExibirRanking{
