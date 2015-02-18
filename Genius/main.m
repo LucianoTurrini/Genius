@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Genius.h"
 #import "Jogador.h"
-#import "Genius.h"
 
 
     void ExibeMenu()

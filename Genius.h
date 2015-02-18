@@ -21,7 +21,7 @@
 @property NSArray * sequencia;
 @property NSMutableArray *jogadores;
 
--(id) initWithJogadores: (NSMutableArray *)jo
+-(id) initWithJogadores: (NSMutableArray *)jo;
 -(NSString *)randomColour;
 -(void)playTutorial;
 -(void)start;
