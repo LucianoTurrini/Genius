@@ -12,7 +12,7 @@
 @interface Genius : NSObject
 {
     NSArray *cores;
-    NSMutableArray *sequencia;
+    NSMutableArray *sequencia; // For refactoring.
     NSMutableArray *jogadores;
     bool gameOver;
 }
@@ -23,10 +23,12 @@
 
 -(id) initWithJogadores: (NSMutableArray *)jo;
 -(NSString *)randomColour;
+-(NSString *)userLogin;
 -(void)playTutorial;
--(void)showColour;
+-(NSString *)showColour;
 -(void)clear;
 -(void)start;
+-(BOOL)try:(NSMutableArray *)sequencia;
 
 -(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;
