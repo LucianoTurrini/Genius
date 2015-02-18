@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
 
-
 @interface Genius : NSObject
 {
     NSArray *cores;

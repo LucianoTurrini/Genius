@@ -98,7 +98,7 @@
     //Lista o Ranking
     int n = [jogadores count];
     for(int i=0; i < n; i++) {
-       printf("%s",[[jogadores objectAtIndex: i] ExibirInf]);
+       //printf("%s",[[jogadores objectAtIndex: i] ExibirInf]);
     }
     
 }

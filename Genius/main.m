@@ -27,15 +27,16 @@ void ExibeMenu() {
         printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 3)Exibir Ranking \n\n 0)Sair do Jogo" );
         printf("\n\n#################################\n");
         printf("\nEntre com o número da opcão desejada:");
+    
     }
 
 //Como o a funcao system("clear") não funciona para limpar o Terminal no Xcode, pulamos linhas para fazer uma simulação
-    void ClearTerminal()
-    {
+void ClearTerminal()
+{
         for(int i= 0; i < 100; i++)
                 printf("\n");
     
-    }
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -72,7 +73,7 @@ int main(int argc, const char * argv[]) {
                     printf("Seu nome é %s ?\n", [Nome UTF8String]);
                     printf("1) Sim \n2) Não\n");
                     scanf("%i",&opcao);
-                    jogador = [[Jogador alloc] initWithmelhorPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
+                    jogador = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:Nome];
                 } while ( opcao >=2);
                 [jogo addJogador:jogador];
                 ClearTerminal();
