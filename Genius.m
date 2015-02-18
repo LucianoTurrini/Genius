@@ -20,9 +20,9 @@
     return self;
 }
 
--(void) addCor{
+-(void) CriarCores{
     
-    [sequencia addObject: [self gerarCor]];
+    [sequencia addObject: [self randomColour]];
     
     for (NSObject *j in sequencia) {
         //Exibe as cores
@@ -46,9 +46,10 @@
     printf("de acordo com os limites dessa    \r\n");
     printf("tela.                             \r\n");
     printf("Uma sequência de cores aparecerá  \r\n");
-    printf("aleatóriamente na tela. Começando \r\n");
-    printf("com 5 cores e avançando até onde  \r\n");
-    printf("suas habilidades Jedi o levarem   \r\n");
+    printf("aleatóriamente na tela.           \r\n");
+    printf("Começando com 5 cores e avançando \r\n");
+    printf("até ondesuas habilidades          \r\n");
+    printf("Jedi o levarem                    \r\n");
     printf("                                  \r\n");
     printf("Depois disso, tente reproduzir na \r\n");
     printf("mesma ordem usando os números:    \r\n");
