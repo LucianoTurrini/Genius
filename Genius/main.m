@@ -81,6 +81,7 @@ int main(int argc, const char * argv[]) {
                 }
                 ClearTerminal();
                 break;
+                
             case 3:
                 [jogo ExibirRanking];
                 break;

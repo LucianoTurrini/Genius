@@ -22,7 +22,7 @@
 
 -(void) CriarCores{
     
-    [sequencia addObject: [self gerarCor]];
+    [sequencia addObject: [self randomColour]];
     
     for (NSObject *j in sequencia) {
         //Exibe as cores
