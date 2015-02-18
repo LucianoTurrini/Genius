@@ -28,8 +28,10 @@
     return self;
 }
 
--(NSString *)ExibirInf {
-    return nome;
+-(void)ExibirRanking {
+    printf("Nome: %s", [nome UTF8String]);
+    printf("      ");
+    printf("Melhor Pontuação : %s\n", [[melhorPont stringValue]lossyCString]);
 }
 
 

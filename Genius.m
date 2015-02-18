@@ -161,18 +161,17 @@
 }
 
 -(void) ExibirRanking{
-    NSLog( @"Existem %lu Jogadores", (unsigned long)[jogadores count] );
-
-//NSLog( @"%lu", (unsigned long)[jogadores count] );
-//    for (Jogador *j in jogadores) {
-//        
-//        //Ordenar aqui
-//        
-//    }
+//NAO FUNCIONA
+//    NSLog( @"Existem %lu Jogadores", (unsigned long)[jogadores count] );
+//    NSSortDescriptor *melhorPontuacao = [[NSSortDescriptor alloc] initWithKey:@"melhorPont" ascending:YES];
+//    NSArray *sortDescriptors = @[melhorPontuacao];
+//    NSArray *sortedArray = [jogadores sortedArrayUsingDescriptors:sortDescriptors];
+    
     //Lista o Ranking
     int n = [jogadores count];
     for(int i=0; i < n; i++) {
-       //printf("%s",[[jogadores objectAtIndex: i] ExibirInf]);
+    Jogador *aux = [jogadores objectAtIndex: i];
+        [aux ExibirRanking];
     }
     
 }
