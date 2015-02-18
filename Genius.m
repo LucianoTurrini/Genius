@@ -125,7 +125,7 @@
 }
 
 -(BOOL)try:(NSMutableArray *)sequencia {
-    
+    return true;
 }
 
 -(void)start {
