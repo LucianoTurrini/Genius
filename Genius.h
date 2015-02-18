@@ -20,6 +20,10 @@
 @property NSArray * cores;
 @property NSArray * sequencia;
 
+-(NSString *)randomColour;
+-(void)playTutorial;
+-(void)start;
+
 -(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;

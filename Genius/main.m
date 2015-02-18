@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Genius.h"
 #import "Jogador.h"
 
 void ExibeMenu() {
@@ -34,6 +35,8 @@ int main(int argc, const char * argv[]) {
         NSString *Nome;
         int opcao;
         Jogador *jogador = [[Jogador alloc] init];
+        Genius *game = [[Genius alloc] init];
+
         do {
             //Exibe menu
             ExibeMenu();
@@ -53,6 +56,7 @@ int main(int argc, const char * argv[]) {
                 break;
             case 2:
                 ClearTerminal();
+                [game playTutorial];
                 break;
             case 3:
                 ClearTerminal();

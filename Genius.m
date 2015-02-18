@@ -42,13 +42,53 @@
     
 }
 
--(NSString *) gerarCor{
-    NSString *cor;
+-(void)playTutorial {
+    printf("##################################\r\n");
+    printf("                                  \r\n");
+    printf("Antes de tudo, ajuste sua janela  \r\n");
+    printf("de acordo com os limites dessa    \r\n");
+    printf("tela.                             \r\n");
+    printf("Uma sequência de cores aparecerá  \r\n");
+    printf("aleatóriamente na tela. Começando \r\n");
+    printf("com 5 cores e avançando até onde  \r\n");
+    printf("suas habilidades Jedi o levarem   \r\n");
+    printf("                                  \r\n");
+    printf("Depois disso, tente reproduzir na \r\n");
+    printf("mesma ordem usando os números:    \r\n");
+    printf("\t1 - AZUL                        \r\n");
+    printf("\t2 - AMARELO                     \r\n");
+    printf("\t3 - VERDE                       \r\n");
+    printf("\t4 - VERMELHO                    \r\n");
+    printf("                                  \r\n");
+    printf("Boa sorte!                        \r\n");
+    printf("                                  \r\n");
+    printf("##################################\r\n");
+}
+
+-(NSString *)randomColour {
+    NSString *colour;
+    int random = (arc4random() % 4) + 1;
+
+    switch (random) {
+        case 1:
+            colour = @"AMARELO";
+            break;
+        case 2:
+            colour = @"AZUL";
+            break;
+        case 3:
+            colour = @"VERDE";
+            break;
+        case 4:
+            colour = @"VERMELHO";
+            break;
+    }
+
+    return colour;
+}
+
+-(void)start {
     
-    //Cor aleatória
-    //Fazer
-    
-    return cor;
 }
 
 -(void) ExibirRanking{
