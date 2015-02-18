@@ -18,10 +18,10 @@
 -(Jogador*) initWithmelhorPont:(NSNumber*)mP qtdJogadas:(NSNumber*)qtdJo pontAtual:(NSNumber*)pontA nome:(NSString*)n
 {
     self = [super init];
-    
-    if(self){
-        qtdJogadas = qtdJo;
+    if (self)
+    {
         melhorPont = mP;
+        qtdJogadas = qtdJo;
         pontAtual = pontA;
         nome = n;
     }

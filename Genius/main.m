@@ -12,13 +12,13 @@
 #import "Fila.h"
 
 void ExibeMenu() {
-
-    printf("#############GENIUS###############\n");
-    printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 0)Sair do Jogo" );
-    printf("\n\n#################################\n");
-    printf("\nEntre com o número da opcão desejada:");
     
-}
+        printf("#############GENIUS###############\n");
+        printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 3)Exibir Ranking \n\n 0)Sair do Jogo" );
+        printf("\n\n#################################\n");
+        printf("\nEntre com o número da opcão desejada:");
+    
+    }
 
 //Como o a funcao system("clear") não funciona para limpar o Terminal no Xcode, pulamos linhas para fazer uma simulação
 void ClearTerminal()
@@ -31,6 +31,10 @@ void ClearTerminal()
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        Jogador *jogador = [[Jogador alloc] init];
+        Genius *jogo = [[Genius alloc] init];
+        
+        
         char str[50] = {0}; // init all to 0
         // you can create an NS foundation NSString object from the str buffer
         NSString *Nome;
@@ -38,10 +42,11 @@ int main(int argc, const char * argv[]) {
         int opcao;
         
         do {
-            //Exibe menu
-            ExibeMenu();
-            //Pegar Opção do Usuario e mandar para o Switch-Case
-            scanf ("%i", &opcao);
+        //Exibe menu
+        ExibeMenu();
+        
+        //Pegar Opção do Usuario e mandar para o Switch-Case
+        scanf ("%i", &opcao);
         
         switch (opcao)
         {
@@ -51,10 +56,11 @@ int main(int argc, const char * argv[]) {
                 
             case 1:
                 do {
-                NSLog(@"\nQual será o nome do seu usuário?");
+                printf("Digite um nome para o usuário.");
+                printf("\nNome:");
                 scanf("%s", str); // read and format into the str buffer
                 Nome = [NSString stringWithUTF8String:str];
-                NSLog(@"\nSeu nome é %@ ?",Nome );
+                printf("Seu nome é %s ?\n", [Nome UTF8String]);
                 printf("1) Sim \n2) Não\n");
                 scanf("%i",&opcao);
                 jogador = [[Jogador alloc] initWithmelhorPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
