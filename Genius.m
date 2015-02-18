@@ -16,17 +16,13 @@
 
 -(id) initWithJogadores: (NSMutableArray *)jo {
     self = [super init];
-    if(self){
-        
-        jogadores = jo;
-        
-    }
+    jogadores = [[NSMutableArray alloc]init];
     return self;
 }
 
--(void) addCor{
+-(void) CriarCores{
     
-    [sequencia addObject: [self gerarCor]];
+    [sequencia addObject: [self randomColour]];
     
     for (NSObject *j in sequencia) {
         //Exibe as cores
@@ -67,7 +63,6 @@
     printf("                                  \r\n");
     printf("##################################\r\n");
 }
-
 -(NSString *)randomColour {
     NSString *colour;
     int random = (arc4random() % 4) + 1;
@@ -122,24 +117,19 @@
 }
 
 -(void) ExibirRanking{
-    NSMutableArray *ranking;
-    
-    NSLog( @"%lu", (unsigned long)[jogadores count] );
+    NSLog( @"Existem %lu Jogadores", (unsigned long)[jogadores count] );
+
+//NSLog( @"%lu", (unsigned long)[jogadores count] );
 //    for (Jogador *j in jogadores) {
 //        
 //        //Ordenar aqui
 //        
 //    }
-    
-    //Lista o ranking
-    for (Jogador *j in ranking) {
-        
-        printf("Jogador: %s ---- %s pontos \n ", [j.nome UTF8String], [[j.melhorPont stringValue]lossyCString]);
-       
-        
+    //Lista o Ranking
+    int n = [jogadores count];
+    for(int i=0; i < n; i++) {
+       //printf("%s",[[jogadores objectAtIndex: i] ExibirInf]);
     }
-    
-    //Completar
     
 }
 
