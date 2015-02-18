@@ -50,7 +50,6 @@ int main(int argc, const char * argv[]) {
             case 1:
                 do {
                 NSLog(@"\nQual será o nome do seu usuário?");
-                    
                 scanf("%s", str); // read and format into the str buffer
                 Nome = [NSString stringWithUTF8String:str];
                 NSLog(@"\nSeu nome é %@ ?",Nome );
