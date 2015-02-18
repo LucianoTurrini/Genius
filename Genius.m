@@ -20,7 +20,9 @@
     return self;
 }
 
--(void) CriarCores{
+/*--- Ainda vai usar? --------
+ 
+ -(void) CriarCores{
     
     [sequencia addObject: [self randomColour]];
     
@@ -37,7 +39,8 @@
     //Completar
     
     
-}
+} -------------------
+ */
 
 -(NSString *)userLogin {
     [self clear];
@@ -124,8 +127,8 @@
     return colour;
 }
 
--(BOOL)try:(NSMutableArray *)sequencia {
-    
+-(BOOL)try:(NSMutableArray *)sequencia {    //O que é aqui?
+    return false;
 }
 
 -(void)start {
