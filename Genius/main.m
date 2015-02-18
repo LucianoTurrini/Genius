@@ -44,9 +44,8 @@ int main(int argc, const char * argv[]) {
         NSMutableArray * jogadores = [[NSMutableArray alloc]init];
         Jogador *jogador = [[Jogador alloc] init];
         Genius *jogo = [[Genius alloc] initWithJogadores:jogadores];
-        
-        // Nome do Jogador
-        char str[50] = {0}; // init all to 0
+
+        char str[50] = {0};
         NSString *Nome;
         
         int opcao;
