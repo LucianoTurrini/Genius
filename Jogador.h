@@ -10,4 +10,11 @@
 
 @interface Jogador : NSObject
 
+@property NSNumber *Pont;
+@property NSNumber *qtdJogadas;
+@property NSNumber *pontAtual;
+@property NSString *nome;
+
+-(Jogador*) initWithPont:(NSNumber*)pont qtdJogadas:(NSNumber*)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n;
+
 @end
