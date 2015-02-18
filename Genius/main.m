@@ -38,10 +38,10 @@ int main(int argc, const char * argv[]) {
         int opcao;
         Jogador *jogador = [[Jogador alloc] init];
         do {
-                    //Exibe menu
-            ExibeMenu();
+        //Exibe menu
+        ExibeMenu();
         
-            //Pegar Opção do Usuario e mandar para o Switch-Case
+        //Pegar Opção do Usuario e mandar para o Switch-Case
         scanf ("%i", &opcao);
         
         switch (opcao)
@@ -60,7 +60,6 @@ int main(int argc, const char * argv[]) {
                 scanf("%i",&opcao);
                 jogador = [[Jogador alloc] initWithPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
                 } while ( opcao >=2);
-                
 
                 ClearTerminal();
                 break;

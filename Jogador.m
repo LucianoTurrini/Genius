@@ -10,17 +10,17 @@
 
 @implementation Jogador
 
-@synthesize Pont;
+@synthesize melhorPont;
 @synthesize qtdJogadas;
 @synthesize pontAtual;
 @synthesize nome;
 
--(Jogador*) initWithPont:(NSNumber*)pont qtdJogadas:(NSNumber*)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n
+-(Jogador*) initWithPont:(NSNumber*)mP qtdJogadas:(NSNumber*)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n
 {
     self = [super init];
     if (self)
     {
-        Pont = pont;
+        melhorPont = mP;
         qtdJogadas = jogadas;
         pontAtual = atual;
         nome = n;
