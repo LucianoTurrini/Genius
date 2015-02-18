@@ -39,6 +39,23 @@
     
 }
 
+-(NSString *)userLogin {
+    [self clear];
+    printf("##################################\r\n");
+    printf("                                  \r\n");
+    printf(" Entre com seu usuário:           \r\n");
+
+    char rawInput[50] = {0};
+    scanf("%s", rawInput);
+    NSString *user = [NSString stringWithUTF8String:rawInput];
+
+    if ([jogadores containsObject:user]) {
+        return user;
+    } else {
+        return nil;
+    }
+}
+
 -(void)playTutorial {
     printf("##################################\r\n");
     printf("                                  \r\n");
@@ -91,29 +108,56 @@
     }
 }
 
--(void)showColour {
+-(NSString *)showColour {
+    NSString *colour = [self randomColour];
+
     printf("##################################\r\n");
     printf("                                  \r\n");
     printf("                                  \r\n");
     printf("                                  \r\n");
-    printf("\t%s\r\n", [[self randomColour] UTF8String]);
+    printf("\t%s\r\n", [colour UTF8String]);
     printf("                                  \r\n");
     printf("                                  \r\n");
     printf("                                  \r\n");
     printf("##################################\r\n");
     
+    return colour;
+}
+
+-(BOOL)try:(NSMutableArray *)sequencia {
     
 }
 
 -(void)start {
-    int turns = 5; // They also represent user points.
+    // Turns are equivalent to how many colours will
+    // be stored in a array for later comparison with
+    // the player's try.
+    // They also represent user points.
+    int turns = 5;
+    NSString *user = [self userLogin];
     
-    do {
+    if (user) {
+        do {
+            NSString *colourSequence[turns];
+
+            for (int i = 0; i < turns; i++) {
+                [self clear];
+                colourSequence[i] = [self showColour];
+                [NSThread sleepForTimeInterval:0.3];
+            }
+
+            // playerTry
+            // if fail -> gameOver = true
+            // else -> increase turn
+            turns++;
+        } while (gameOver == false);
+    } else {
         [self clear];
-        [self showColour];
-        [NSThread sleepForTimeInterval:0.5];
-        
-    } while (gameOver == false);
+        printf("##################################\r\n");
+        printf("                                  \r\n");
+        printf("Usuário não cadastrado!           \r\n");
+        printf("Faça seu cadastro antes de jogar. \r\n");
+    }
 }
 
 -(void) ExibirRanking{
