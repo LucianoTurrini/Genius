@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
+#import "Fila.h"
 
 @interface Genius : NSObject
 {
@@ -19,6 +20,7 @@
 
 @property NSArray * cores;
 @property NSArray * sequencia;
+@property NSMutableArray *jogadores;
 
 -(NSString *)randomColour;
 -(void)playTutorial;
@@ -27,7 +29,7 @@
 -(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;
--(void) addJogador: (Jogador *) j;
+-(void) addJogador: (NSObject *) j;
 -(NSString *) gerarCor;
 
 @end

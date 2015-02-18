@@ -10,29 +10,22 @@
 
 @implementation Jogador
 
-@synthesize nome;
 @synthesize melhorPont;
 @synthesize qtdJogadas;
 @synthesize pontAtual;
+@synthesize nome;
 
--(id)initWithPont:(NSNumber *)mP qtdJogadas:(NSNumber *)qtdJo pontAtual:(NSNumber *)pontA nome:(NSString *)n{
+-(Jogador*) initWithPont:(NSNumber*)mP qtdJogadas:(NSNumber*)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n
+{
     self = [super init];
-    
-    if(self){
-        qtdJogadas = qtdJo;
+    if (self)
+    {
         melhorPont = mP;
-        pontAtual = pontA;
+        qtdJogadas = jogadas;
+        pontAtual = atual;
         nome = n;
     }
-    
     return self;
-}
-
--(void) ExibirInf {
-    printf("Nome: %s\n", [nome UTF8String]);
-    printf("Melhor Pontuação : %s\n", [[melhorPont stringValue]lossyCString]);
-    printf("Número de Jogadas : %s\n", [[qtdJogadas stringValue]lossyCString]);
-    printf("Pontuação Atual : %s\n", [[pontAtual stringValue]lossyCString]);
 }
 
 

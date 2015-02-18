@@ -27,5 +27,4 @@
 -(id) initWithPont:(NSNumber *)mP qtdJogadas:(NSNumber *)qtdJo pontAtual:(NSNumber *)pontA nome:(NSString *)n;
 -(void) ExibirInf;
 
-
 @end

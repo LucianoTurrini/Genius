@@ -12,6 +12,7 @@
 
 @synthesize cores;
 @synthesize sequencia;
+@synthesize jogadores;
 
 -(instancetype) init{
     self = [super init];
@@ -94,17 +95,18 @@
 -(void) ExibirRanking{
     NSMutableArray *ranking;
     
-    for (Jogador *j in jogadores) {
-        
-        //Ordenar aqui
-        
-    }
+    NSLog( @"%lu", (unsigned long)[jogadores count] );
+//    for (Jogador *j in jogadores) {
+//        
+//        //Ordenar aqui
+//        
+//    }
     
     //Lista o ranking
     for (Jogador *j in ranking) {
         
-        NSLog(@"Jogador: %@; %d pontos \n ", [j nome], [j melhorPont]);
-        
+        printf("Jogador: %s ---- %s pontos \n ", [j.nome UTF8String], [[j.melhorPont stringValue]lossyCString]);
+       
         
     }
     
@@ -112,7 +114,7 @@
     
 }
 
--(void) addJogador: (Jogador *) j{
+-(void) addJogador: (NSObject *) j{
     [jogadores addObject: j];
 }
 
