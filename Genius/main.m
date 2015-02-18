@@ -29,7 +29,7 @@ void ClearTerminal() {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        char str[50] = {0};                  // init all to 0
+        char str[50] = {0}; // init all to 0
         // you can create an NS foundation NSString object from the str buffer
         NSString *Nome;
         int opcao;
