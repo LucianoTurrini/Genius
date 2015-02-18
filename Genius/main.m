@@ -31,12 +31,13 @@ void ClearTerminal()
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+        // inicializacao do jogo
+        NSMutableArray * jogadores = [[NSMutableArray alloc]init];
         Jogador *jogador = [[Jogador alloc] init];
-        Genius *jogo = [[Genius alloc] init];
+        Genius *jogo = [[Genius alloc] initWithJogadores:jogadores];
         
+        // Nome do Jogador
         char str[50] = {0}; // init all to 0
-        // you can create an NS foundation NSString object from the str buffer
         NSString *Nome;
         
         int opcao;
@@ -70,8 +71,15 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 2:
-                ClearTerminal();
+                
                 [jogo playTutorial];
+                int c;
+                c = getchar();
+                if (c != EOF) {
+                    putchar(c);
+                    c = getchar();
+                }
+                ClearTerminal();
                 break;
             case 3:
                 [jogo ExibirRanking];
