@@ -10,9 +10,18 @@
 #import "Genius.h"
 #import "Jogador.h"
 
+//Esperar Enter do usuario para prosseguir
+void PressEnter() {
+    printf("\n\nAperte ENTER para continuar...");
+    int c = getchar();
+    if (c != EOF) {
+        putchar(c);
+        c = getchar();
+    }
 
-    void ExibeMenu()
-{
+}
+
+void ExibeMenu() {
     
         printf("#############GENIUS###############\n");
         printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 3)Exibir Ranking \n\n 0)Sair do Jogo" );
@@ -73,16 +82,13 @@ int main(int argc, const char * argv[]) {
             case 2:
                 
                 [jogo playTutorial];
-                int c;
-                c = getchar();
-                if (c != EOF) {
-                    putchar(c);
-                    c = getchar();
-                }
+                PressEnter();
                 ClearTerminal();
                 break;
             case 3:
                 [jogo ExibirRanking];
+                PressEnter();
+                ClearTerminal();
                 break;
             default:
                 

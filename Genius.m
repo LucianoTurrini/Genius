@@ -86,23 +86,19 @@
 }
 
 -(void) ExibirRanking{
-    NSMutableArray *ranking = [[NSMutableArray alloc]init];
+    NSLog( @"Existem %lu Jogadores", (unsigned long)[jogadores count] );
+
 //NSLog( @"%lu", (unsigned long)[jogadores count] );
 //    for (Jogador *j in jogadores) {
 //        
 //        //Ordenar aqui
 //        
 //    }
-    
-    //Lista o ranking
-    for (Jogador *j in ranking) {
-        
-        printf("Jogador: %s ---- %s pontos \n ", [j.nome UTF8String], [[j.melhorPont stringValue]lossyCString]);
-       
-        
+    //Lista o Ranking
+    int n = [jogadores count];
+    for(int i=0; i < n; i++) {
+       printf("%s",[[jogadores objectAtIndex: i] ExibirInf]);
     }
-    NSLog( @"Existem %lu Jogadores na Lista", (unsigned long)[jogadores count] );
-    //Completar
     
 }
 

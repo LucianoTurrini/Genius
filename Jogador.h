@@ -25,6 +25,6 @@
 @property NSString *nome;
 
 -(id) initWithPont:(NSNumber *)mP qtdJogadas:(NSNumber *)qtdJo pontAtual:(NSNumber *)pontA nome:(NSString *)n;
--(void) ExibirInf;
+-(NSString *) ExibirInf;
 
 @end

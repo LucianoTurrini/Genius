@@ -28,6 +28,10 @@
     return self;
 }
 
+-(NSString *)ExibirInf {
+    return nome;
+}
+
 
 @end
 
