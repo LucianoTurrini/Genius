@@ -62,10 +62,7 @@
     printf("\t4 - VERMELHO                    \r\n");
     printf("                                  \r\n");
     printf("Boa sorte!                        \r\n");
-    printf("                                  \r\n");
-    printf("##################################\r\n");
 }
-
 -(NSString *)randomColour {
     NSString *colour;
     int random = (arc4random() % 4) + 1;
@@ -93,9 +90,8 @@
 }
 
 -(void) ExibirRanking{
-    NSMutableArray *ranking;
-    
-    NSLog( @"%lu", (unsigned long)[jogadores count] );
+    NSMutableArray *ranking = [[NSMutableArray alloc]init];
+//NSLog( @"%lu", (unsigned long)[jogadores count] );
 //    for (Jogador *j in jogadores) {
 //        
 //        //Ordenar aqui
@@ -109,7 +105,7 @@
        
         
     }
-    
+    NSLog( @"Existem %lu Jogadores na Lista", (unsigned long)[jogadores count] );
     //Completar
     
 }
