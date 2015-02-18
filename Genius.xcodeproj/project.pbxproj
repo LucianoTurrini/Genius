@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210596E01A9509A1003E5FAC /* Fila.m in Sources */ = {isa = PBXBuildFile; fileRef = 210596DF1A9509A1003E5FAC /* Fila.m */; };
 		2192CF411A8E2A7E00640EE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2192CF401A8E2A7E00640EE1 /* main.m */; };
 		2192CF491A8E2AA000640EE1 /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 2192CF481A8E2AA000640EE1 /* Jogador.m */; };
 		2192CF4C1A8E2AAE00640EE1 /* Genius.m in Sources */ = {isa = PBXBuildFile; fileRef = 2192CF4B1A8E2AAE00640EE1 /* Genius.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		210596DE1A9509A1003E5FAC /* Fila.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fila.h; path = ../../../Downloads/Fila/Fila.h; sourceTree = "<group>"; };
+		210596DF1A9509A1003E5FAC /* Fila.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fila.m; path = ../../../Downloads/Fila/Fila.m; sourceTree = "<group>"; };
 		2192CF3D1A8E2A7E00640EE1 /* Genius */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Genius; sourceTree = BUILT_PRODUCTS_DIR; };
 		2192CF401A8E2A7E00640EE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2192CF471A8E2AA000640EE1 /* Jogador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogador.h; sourceTree = "<group>"; };
@@ -47,6 +50,8 @@
 		2192CF341A8E2A7E00640EE1 = {
 			isa = PBXGroup;
 			children = (
+				210596DE1A9509A1003E5FAC /* Fila.h */,
+				210596DF1A9509A1003E5FAC /* Fila.m */,
 				2192CF471A8E2AA000640EE1 /* Jogador.h */,
 				2192CF481A8E2AA000640EE1 /* Jogador.m */,
 				2192CF4A1A8E2AAE00640EE1 /* Genius.h */,
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2192CF491A8E2AA000640EE1 /* Jogador.m in Sources */,
+				210596E01A9509A1003E5FAC /* Fila.m in Sources */,
 				2192CF4C1A8E2AAE00640EE1 /* Genius.m in Sources */,
 				2192CF411A8E2A7E00640EE1 /* main.m in Sources */,
 			);
@@ -244,6 +250,7 @@
 				2192CF461A8E2A7E00640EE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

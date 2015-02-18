@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
+#import "Genius.h"
+#import "Fila.h"
 
 void ExibeMenu() {
 
@@ -34,7 +36,7 @@ int main(int argc, const char * argv[]) {
         NSString *Nome;
         
         int opcao;
-        Jogador *jogador = [[Jogador alloc] init];
+        
         do {
             //Exibe menu
             ExibeMenu();
@@ -57,8 +59,7 @@ int main(int argc, const char * argv[]) {
                 scanf("%i",&opcao);
                 jogador = [[Jogador alloc] initWithmelhorPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
                 } while ( opcao >=2);
-                
-
+                [jogo addJogador:jogador];
                 ClearTerminal();
                 break;
                 
@@ -67,7 +68,7 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 3:
-                ClearTerminal();
+                [jogo ExibirRanking];
                 break;
                 
             default:
