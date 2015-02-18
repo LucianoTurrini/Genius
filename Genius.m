@@ -14,17 +14,17 @@
 @synthesize sequencia;
 @synthesize jogadores;
 
--(instancetype) init{
+-(id) initWithJogadores: (NSMutableArray *)jo {
     self = [super init];
     if(self){
         
-        gameOver = false;
+        jogadores = jo;
         
     }
     return self;
 }
 
--(void) addCor{
+-(void) CriarCores{
     
     [sequencia addObject: [self gerarCor]];
     

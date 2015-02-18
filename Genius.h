@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Jogador.h"
-#import "Fila.h"
+
 
 @interface Genius : NSObject
 {
@@ -22,6 +22,7 @@
 @property NSArray * sequencia;
 @property NSMutableArray *jogadores;
 
+-(id) initWithJogadores: (NSMutableArray *)jo;
 -(NSString *)randomColour;
 -(void)playTutorial;
 -(void)start;

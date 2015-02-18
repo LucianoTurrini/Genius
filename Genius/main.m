@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "Genius.h"
 #import "Jogador.h"
-#import "Genius.h"
-#import "Fila.h"
 
-void ExibeMenu() {
+
+    void ExibeMenu()
+{
     
         printf("#############GENIUS###############\n");
         printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 3)Exibir Ranking \n\n 0)Sair do Jogo" );
@@ -56,14 +56,14 @@ int main(int argc, const char * argv[]) {
                 
             case 1:
                 do {
-                printf("Digite um nome para o usuário.");
-                printf("\nNome:");
-                scanf("%s", str); // read and format into the str buffer
-                Nome = [NSString stringWithUTF8String:str];
-                printf("Seu nome é %s ?\n", [Nome UTF8String]);
-                printf("1) Sim \n2) Não\n");
-                scanf("%i",&opcao);
-                jogador = [[Jogador alloc] initWithmelhorPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
+                    printf("Digite um nome para o usuário.");
+                    printf("\nNome:");
+                    scanf("%s", str); // read and format into the str buffer
+                    Nome = [NSString stringWithUTF8String:str];
+                    printf("Seu nome é %s ?\n", [Nome UTF8String]);
+                    printf("1) Sim \n2) Não\n");
+                    scanf("%i",&opcao);
+                    jogador = [[Jogador alloc] initWithmelhorPont:0 qtdJogadas:0 pontAtual:0 nome:Nome];
                 } while ( opcao >=2);
                 [jogo addJogador:jogador];
                 ClearTerminal();
@@ -76,15 +76,14 @@ int main(int argc, const char * argv[]) {
             case 3:
                 [jogo ExibirRanking];
                 break;
-                
             default:
-                printf("\n\nA opção não existe! Tente Novamente...\n\n");
-                ClearTerminal();
-                break;
+                
+                NSLog (@"Esse opção não existe, digite um numero válido");
+                
         }
-        } while (opcao != 0);
+            
+        }  while (opcao != 0);
         
-    }
-    printf("\n\n####OBRIGADO!####\n\n");
-    return 0;
-}
+        printf("\n\n####OBRIGADO!####\n\n");
+        return 0;
+    }}
