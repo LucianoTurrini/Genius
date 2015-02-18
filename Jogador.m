@@ -15,7 +15,7 @@
 @synthesize pontAtual;
 @synthesize nome;
 
--(Jogador*) initWithPont:(NSNumber*)mP qtdJogadas:(NSNumber*)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n
+-(id) initWithPont:(NSNumber*)mP qtdJogadas:(NSNumber*)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n
 {
     self = [super init];
     if (self)

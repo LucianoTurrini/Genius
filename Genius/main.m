@@ -10,7 +10,6 @@
 #import "Genius.h"
 #import "Jogador.h"
 #import "Genius.h"
-#import "Fila.h"
 
 
     void ExibeMenu()
