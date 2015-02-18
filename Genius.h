@@ -7,17 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Jogador.h"
 
 @interface Genius : NSObject
 {
-    NSArray * cores;
-    NSArray * sequencia;
-    
+    NSArray *cores;
+    NSMutableArray *sequencia;
+    NSMutableArray *jogadores;
+    bool gameOver;
 }
 
 @property NSArray * cores;
 @property NSArray * sequencia;
 
+-(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;
+-(void) ExibirRanking;
+-(void) addJogador: (Jogador *) j;
+-(NSString *) gerarCor;
 
 @end

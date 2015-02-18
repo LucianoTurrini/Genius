@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 3:
-                //implement
+                ClearTerminal();
                 break;
             default:
                 

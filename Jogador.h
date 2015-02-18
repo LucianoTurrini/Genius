@@ -8,7 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface Jogador : NSObject
+{
+    NSString *nome;
+    NSNumber *melhorPont;
+    NSNumber *qtdJogadas;
+    NSNumber *pontAtual;
+    
+}
+
+@property NSNumber *melhorPont;
+@property NSNumber *qtdJogadas;
+@property NSNumber *pontAtual;
+@property NSString *nome;
+
+-(id) initWithPont:(NSNumber *)mP qtdJogadas:(NSNumber *)qtdJo pontAtual:(NSNumber *)pontA nome:(NSString *)n;
+-(void) ExibirInf;
+
 
 @property NSNumber *Pont;
 @property NSNumber *qtdJogadas;
