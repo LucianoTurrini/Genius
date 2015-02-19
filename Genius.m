@@ -141,7 +141,7 @@
     printf("                                  \r\n");
     printf("                                  \r\n");
     printf("                                  \r\n");
-    printf("\t ETAPA\r\n");
+    printf("\t Cor: \r\n");
     printf("\t\t%i\r\n", turns);
     printf("\t%s\r\n", [colour UTF8String]);
     printf("                                  \r\n");
