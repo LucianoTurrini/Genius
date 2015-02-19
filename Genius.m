@@ -252,14 +252,13 @@
 
 // Exibir o ranking.
 -(void) ExibirRanking{
-    int n = [jogadores count];
     
     //Ordenação
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"melhorPont" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [jogadores sortedArrayUsingDescriptors:sortDescriptors];
-    
-    for(int i=0; i < n; i++) {
+    //Imprimir Ranking
+    for(int i=0; i < [jogadores count]; i++) {
         Jogador *aux = [sortedArray objectAtIndex: i];
         [aux ExibirRanking];
     }
