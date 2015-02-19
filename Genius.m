@@ -213,7 +213,27 @@
 
             if ([self compare:sequence withPlayerSequence:[self retrievePlayerSequence:turns]]) {
                 turns++;
-                // EXIBIR MENSAGEM DE VITÓRIA
+                
+                NSNumber *pontos =  [NSNumber numberWithDouble: (turns*1.5)];
+                
+                //Pontuação
+                for (int i = 0; i < [jogadores count]; i++) {
+                    Jogador *jog = [jogadores objectAtIndex:i];
+                    if ([[jog nome] isEqualToString:user]) {
+                        [jog setPontAtual: pontos];
+                        
+                        if([jog pontAtual] > [jog melhorPont])
+                            [jog setMelhorPont: pontos];
+                        
+                        [jogadores insertObject:jog atIndex:i];
+                    }
+                }
+                
+                printf("Correto! - %f pontos", pontos);
+                [NSThread sleepForTimeInterval:1.25];
+                [self clear];
+                
+                
                 // REMOVER VETORES?
             } else {
                 // EXIBIR PONTUAÇÃO - VARIÁVEL turns
