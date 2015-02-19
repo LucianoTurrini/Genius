@@ -225,7 +225,7 @@
                         if([jog pontAtual] > [jog melhorPont])
                             [jog setPont: pontos];
                         
-                        [jogadores insertObject:jog atIndex:i];
+                       // [jogadores insertObject:jog atIndex:i];
                     }
                 }
                 printf("Correto! - %s Pontos" , [[pontos stringValue]lossyCString]);
