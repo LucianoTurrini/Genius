@@ -34,6 +34,11 @@
     printf("Melhor Pontuação: %s\n", [[melhorPont stringValue]lossyCString]);
 }
 
+-(void)setPont:(NSNumber *)valor
+{
+    melhorPont=valor;
+}
+
 
 @end
 

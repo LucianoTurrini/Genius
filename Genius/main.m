@@ -104,3 +104,30 @@ int main(int argc, const char * argv[]) {
         printf("\n\n####OBRIGADO!####\n\n");
         return 0;
     }}
+
+//        Genius *NewGame = [[Genius alloc]init];
+//
+//        //como funciona o nível
+//        int tamanho = 1;
+//
+//        int vetor2 [tamanho];
+//
+//        BOOL respostaNivel = [NewGame nivel:vetor2 eTam:tamanho];
+//
+//        if(respostaNivel)
+//        {
+//            NSLog(@"Game Over");
+//        }
+//
+//        while(respostaNivel)
+//        {
+//            NSLog(@"nivel up");
+//            tamanho++;
+//         int vetorUsavel = *[NewGame nivel2:vetor2 eTam:tamanho];
+//
+//            [NewGame nivel:&vetorUsavel eTam:tamanho];
+//        }
+//            }
+//    return 0;
+//}
+

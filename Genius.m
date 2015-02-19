@@ -7,6 +7,7 @@
 //
 
 #import "Genius.h"
+#import "Jogador.h"
 
 @implementation Genius
 
@@ -167,11 +168,11 @@
     
     //Jogadores teste
     Jogador *jogador = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User1"];
-        [jogador setMelhorPont: @20]; [self addJogador:jogador];
+        [jogador setPont: @20]; [self addJogador:jogador];
     Jogador *jogador2 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User2"];
-        [jogador2 setMelhorPont: @243]; [self addJogador:jogador2];
+        [jogador2 setPont: @243]; [self addJogador:jogador2];
     Jogador *jogador3 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User3"];
-        [jogador3 setMelhorPont: @15]; [self addJogador:jogador3];
+        [jogador3 setPont: @15]; [self addJogador:jogador3];
     
     int n = [jogadores count];
     
@@ -190,6 +191,62 @@
 -(void) addJogador: (NSObject *) j{
     [jogadores addObject: j];
 }
+
+
+//-(BOOL)nivel:(int [])vetor eTam:(int) tamanho
+//{
+//    int j = 0;
+//    int k=0;
+//    int cor = arc4random()%4 + 1;
+//    vetor[0]=cor;
+//    int vetorUsuario [tamanho];
+//    int resposta;
+//
+//    NSLog(@"a sequencia é:\n");
+//    while(k<tamanho){
+//        NSLog(@"%i", vetor[k]);
+//        k++;
+//    }
+//
+//    while (j < tamanho)
+//    {
+//        scanf("%i", &resposta);
+//        vetorUsuario [j] = resposta;
+//        j++;
+//    }
+//    BOOL perdeu=false;
+//
+//    for (int m = 0; m<tamanho; m++)
+//    {
+//        if(vetorUsuario[m] == vetor[m])perdeu = true;
+//    }
+//
+//    return perdeu;
+//}
+//
+//-(int *)nivel2:(int [])vetor2 eTam:(int)tamanho{
+//
+//    BOOL subirNivel = false;
+//    int NewVetor [tamanho+1];
+//    while(subirNivel){
+//        for (int i = 0; i<tamanho; i++)
+//        {
+//            if(i==(tamanho-1)){
+//                NewVetor [i] = arc4random()%4 +1;
+//            }
+//            else
+//            {
+//                NewVetor[i] = vetor2 [i];
+//            }
+//
+//        }
+//        tamanho++;
+//        subirNivel=false;
+//    }
+//
+//    return NewVetor;
+//}
+
 
   
 @end
