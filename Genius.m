@@ -15,33 +15,12 @@
 @synthesize sequencia;
 @synthesize jogadores;
 
+//Construtor
 -(id) initWithJogadores: (NSMutableArray *)jo {
     self = [super init];
     jogadores = [[NSMutableArray alloc]init];
     return self;
 }
-
-/*--- Ainda vai usar? --------
- 
- -(void) CriarCores{
-    
-    [sequencia addObject: [self randomColour]];
-    
-    for (NSObject *j in sequencia) {
-        //Exibe as cores
-        NSLog(@"%@; ", j);
-    }
-    
-    [NSThread sleepForTimeInterval:2.0]; //Delay
-    
-    printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-
-    
-    //Completar
-    
-    
-} -------------------
- */
 
 //Esperar Enter do usuario para prosseguir
 -(void)pressEnter {
@@ -154,7 +133,6 @@
     }
 }
 
-
 // Exibe a cor durante uma partida.
 -(NSString *)showColour:(int)turns {
     NSString *colour = [self randomColour];
@@ -183,7 +161,6 @@
     }
     return true;
 }
-
 
 // Pega os palpites do jogador.
 -(NSMutableArray *)retrievePlayerSequence:(int)turns {
@@ -227,7 +204,7 @@
                 [self clear];
                 int colour = [self convertColour:[self showColour:(i + 1)]];
                 [sequence insertObject:[NSNumber numberWithInt:colour] atIndex:i];
-                [NSThread sleepForTimeInterval:1];
+                [NSThread sleepForTimeInterval:1.25];
             }
 
             if ([self compare:sequence withPlayerSequence:[self retrievePlayerSequence:turns]]) {
@@ -265,66 +242,8 @@
     
 }
 
-
 -(void) addJogador: (NSObject *) j{
     [jogadores addObject: j];
 }
 
-
-//-(BOOL)nivel:(int [])vetor eTam:(int) tamanho
-//{
-//    int j = 0;
-//    int k=0;
-//    int cor = arc4random()%4 + 1;
-//    vetor[0]=cor;
-//    int vetorUsuario [tamanho];
-//    int resposta;
-//
-//    NSLog(@"a sequencia é:\n");
-//    while(k<tamanho){
-//        NSLog(@"%i", vetor[k]);
-//        k++;
-//    }
-//
-//    while (j < tamanho)
-//    {
-//        scanf("%i", &resposta);
-//        vetorUsuario [j] = resposta;
-//        j++;
-//    }
-//    BOOL perdeu=false;
-//
-//    for (int m = 0; m<tamanho; m++)
-//    {
-//        if(vetorUsuario[m] == vetor[m])perdeu = true;
-//    }
-//
-//    return perdeu;
-//}
-//
-//-(int *)nivel2:(int [])vetor2 eTam:(int)tamanho{
-//
-//    BOOL subirNivel = false;
-//    int NewVetor [tamanho+1];
-//    while(subirNivel){
-//        for (int i = 0; i<tamanho; i++)
-//        {
-//            if(i==(tamanho-1)){
-//                NewVetor [i] = arc4random()%4 +1;
-//            }
-//            else
-//            {
-//                NewVetor[i] = vetor2 [i];
-//            }
-//
-//        }
-//        tamanho++;
-//        subirNivel=false;
-//    }
-//
-//    return NewVetor;
-//}
-
-
-  
 @end
