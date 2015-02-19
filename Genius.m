@@ -54,6 +54,9 @@
     }
 }
 
+// Pega o login do usuário e verifica se existe na lista de
+// jogadores.
+// Se não existir, volta ao menu.
 -(NSString *)userLogin {
     [self clear];
     printf("##################################\r\n");
@@ -73,6 +76,7 @@
     return nil;
 }
 
+// Exibe um tutorialzinho pra ajudar a galeris.
 -(void)playTutorial {
     printf("##################################\r\n");
     printf("                                  \r\n");
@@ -103,6 +107,8 @@
     printf("##################################\r\n");
     [self pressEnter];
 }
+
+// Gera uma cor aleatória.
 -(NSString *)randomColour {
     NSString *colour;
     int random = (arc4random() % 4) + 1;
@@ -125,6 +131,7 @@
     return colour;
 }
 
+// Converte de cor para número.
 -(int)convertColour:(NSString *)colour {
     int colourCode;
     if ([colour isEqualToString:@"AMARELO"]) {
@@ -140,12 +147,15 @@
     return colourCode;
 }
 
+// Limpa a tela.
 -(void)clear {
     for (int i = 0; i < 100; i++) {
         printf("\n");
     }
 }
 
+
+// Exibe a cor durante uma partida.
 -(NSString *)showColour:(int)turns {
     NSString *colour = [self randomColour];
 
@@ -164,6 +174,7 @@
     return colour;
 }
 
+// Compara as cores geradas com os palpites do jogador.
 -(BOOL)compare:(NSArray*)sequence withPlayerSequence:(NSArray*)playerSequence {
     for (int i = 0; i < [sequence count]; i++) {
         if ([sequence objectAtIndex:i] != [playerSequence objectAtIndex:i]) {
@@ -173,6 +184,8 @@
     return true;
 }
 
+
+// Pega os palpites do jogador.
 -(NSMutableArray *)retrievePlayerSequence:(int)turns {
     int rawColour;
     NSMutableArray *playerSequence;
@@ -196,6 +209,7 @@
     return playerSequence;
 }
 
+// Roda o jogo.
 -(void)start {
     // Turns are equivalent to how many colours will
     // be stored in a array for later comparison with
@@ -236,6 +250,7 @@
     }
 }
 
+// Exibir o ranking.
 -(void) ExibirRanking{
     int n = [jogadores count];
     
@@ -250,6 +265,7 @@
     }
     
 }
+
 
 -(void) addJogador: (NSObject *) j{
     [jogadores addObject: j];
