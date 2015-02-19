@@ -164,27 +164,19 @@
 }
 
 -(void) ExibirRanking{
-//NAO FUNCIONA
-//    NSLog( @"Existem %lu Jogadores", (unsigned long)[jogadores count] );
-//    NSSortDescriptor *melhorPontuacao = [[NSSortDescriptor alloc] initWithKey:@"melhorPont" ascending:YES];
-//    NSArray *sortDescriptors = @[melhorPontuacao];
-//    NSArray *sortedArray = [jogadores sortedArrayUsingDescriptors:sortDescriptors];
     
-    //Lista o Ranking
-    int n = [jogadores count];
-    
-    
-    /* Teste ---
+    //Jogadores teste
     Jogador *jogador = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User1"];
         [jogador setMelhorPont: @20]; [self addJogador:jogador];
     Jogador *jogador2 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User2"];
         [jogador2 setMelhorPont: @243]; [self addJogador:jogador2];
     Jogador *jogador3 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User3"];
         [jogador3 setMelhorPont: @15]; [self addJogador:jogador3];
-    */
+    
+    int n = [jogadores count];
     
     //Ordenação
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"melhorPont" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"melhorPont" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [jogadores sortedArrayUsingDescriptors:sortDescriptors];
     
@@ -192,14 +184,6 @@
         Jogador *aux = [sortedArray objectAtIndex: i];
         [aux ExibirRanking];
     }
-    
-    
-    
-    /*
-    for(int i=0; i < n; i++) {
-    Jogador *aux = [jogadores objectAtIndex: i];
-        [aux ExibirRanking];
-    }*/
     
 }
 
