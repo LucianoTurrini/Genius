@@ -34,9 +34,13 @@
 
 -(BOOL)compare:(NSArray*)sequence withPlayerSequence:(NSArray*)playerSequence;
 
--(void) CriarCores;
+//-(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;
 -(void) addJogador: (NSObject *) j;
+
+//-(BOOL)nivel:(int [])vetor eTam:(int) tamanho;
+//-(int *) nivel2:(int [])vetor2 eTam:(int)tamanho;
+
 
 @end
