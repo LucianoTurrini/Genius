@@ -15,7 +15,7 @@
 @synthesize pontAtual;
 @synthesize nome;
 
--(id) initWithPont:(NSNumber*)mP qtdJogadas:(NSNumber*)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n
+-(id) initWithPont:(NSNumber*)mP qtdJogadas:(int)jogadas pontAtual:(NSNumber*)atual nome:(NSString*)n
 {
     self = [super init];
     if (self)
@@ -29,12 +29,17 @@
 }
 
 -(void)ExibirRanking {
-    printf("%s", [[melhorPont stringValue]lossyCString]);
-    printf("                         ");
-    printf("%s\n", [nome UTF8String]);
+    printf("%8s  ", [[melhorPont stringValue]lossyCString]);
+    printf("              ");
+    printf("%8s", [nome UTF8String]);
+    printf("       ");
+    printf("%8i\n", qtdJogadas);
 }
 
-
+-(void)QtdJogadas {
+    qtdJogadas = qtdJogadas + 1;;
+    
+}
 
 
 @end

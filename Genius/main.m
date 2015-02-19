@@ -46,11 +46,11 @@ int main(int argc, const char * argv[]) {
         Genius *jogo = [[Genius alloc] initWithJogadores:jogadores];
 
         //Jogadores teste
-        Jogador *jogador1 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User1"];
+        Jogador *jogador1 = [[Jogador alloc] initWithPont:@0 qtdJogadas:1 pontAtual:@0 nome:@"User1"];
         [jogador1 setMelhorPont: @20]; [jogo addJogador:jogador1];
-        Jogador *jogador2 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User2"];
+        Jogador *jogador2 = [[Jogador alloc] initWithPont:@0 qtdJogadas:1 pontAtual:@0 nome:@"User2"];
         [jogador2 setMelhorPont: @80]; [jogo addJogador:jogador2];
-        Jogador *jogador3 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User3"];
+        Jogador *jogador3 = [[Jogador alloc] initWithPont:@0 qtdJogadas:1 pontAtual:@0 nome:@"User3"];
         [jogador3 setMelhorPont: @15]; [jogo addJogador:jogador3];
         
         char str[50] = {0};
@@ -81,7 +81,7 @@ int main(int argc, const char * argv[]) {
                     printf("\nSeu nome é %s ?\n", [Nome UTF8String]);
                     printf("1) Sim \n2) Não\n");
                     scanf("%i",&opcao);
-                    jogador = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:Nome];
+                    jogador = [[Jogador alloc] initWithPont:@0 qtdJogadas:0 pontAtual:@0 nome:Nome];
                 } while ( opcao >=2);
                 [jogo addJogador:jogador];
                 ClearTerminal();

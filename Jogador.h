@@ -12,18 +12,19 @@
 {
     NSString *nome;
     NSNumber *melhorPont;
-    NSNumber *qtdJogadas;
+    int qtdJogadas;
     NSNumber *pontAtual;
     
 }
 
 @property NSNumber *melhorPont;
-@property NSNumber *qtdJogadas;
+@property int qtdJogadas;
 @property NSNumber *pontAtual;
 @property NSString *nome;
 
--(id) initWithPont:(NSNumber*)mP qtdJogadas:(NSNumber*)qtdJo pontAtual:(NSNumber*)pontA nome:(NSString*)n;
+-(id) initWithPont:(NSNumber*)mP qtdJogadas:(int)qtdJo pontAtual:(NSNumber*)pontA nome:(NSString*)n;
 -(void)ExibirRanking;
+-(void)QtdJogadas;
 
 
 @end

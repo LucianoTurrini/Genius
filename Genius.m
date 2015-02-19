@@ -199,45 +199,50 @@
     int turns = 4;
     NSString *user = [self userLogin];
     gameOver = false;
-    
+    //QTD de Jogadas
+    for (int i = 0; i < [jogadores count]; i++) {
+        Jogador *jog = [jogadores objectAtIndex:i];
+        if ([[jog nome] isEqualToString:user]) {
+            [jog QtdJogadas];
+        }
+    }
+
     if (user) {
         do {
             NSMutableArray *sequence;
             sequence = [[NSMutableArray alloc]init];
+            
 
             for (int i = 0; i < turns; i++) {
                 [self clear];
                 int colour = [self convertColour:[self showColour:(i + 1)]];
                 [sequence insertObject:[NSNumber numberWithInt:colour] atIndex:i];
-                [NSThread sleepForTimeInterval:1.25];
+                [NSThread sleepForTimeInterval:1.5];
             }
 
             if ([self compare:sequence withPlayerSequence:[self retrievePlayerSequence:turns]]) {
                 turns++;
                 
-                NSNumber *pontos =  [NSNumber numberWithDouble: (turns*1.5)];
+                NSNumber *pontos =  [NSNumber numberWithInt: (turns*1.5)];
                 
                 //Pontuação
                 for (int i = 0; i < [jogadores count]; i++) {
                     Jogador *jog = [jogadores objectAtIndex:i];
                     if ([[jog nome] isEqualToString:user]) {
-                        [jog setPontAtu: pontos];
-                        
-                        if([jog pontAtual] > [jog melhorPont])
-                            [jog setPont: pontos];
-                        
-                        //[jogadores insertObject:jog atIndex:i];
+                        [jog setPontAtual: pontos];
+                        int a1 = [pontos intValue];
+                        int a2 = [[jog melhorPont] intValue];
+                        //Se ponto atual for maior que a melhor Pontuação, Substitui
+                        if(a1 > a2){
+                            [jog setMelhorPont: pontos];
+                        }
                     }
                 }
                 printf("Correto! - %s Pontos" , [[pontos stringValue]lossyCString]);
                 [NSThread sleepForTimeInterval:1.25];
                 [self clear];
                 
-                
-                // REMOVER VETORES?
             } else {
-                // EXIBIR PONTUAÇÃO - VARIÁVEL turns
-                // ARMAZENAR PONTUAÇÃO DO JOGADOR E INCREMENTAR TENTATIVAS
                 gameOver = true;
             }
         } while (gameOver == false);
@@ -261,7 +266,7 @@
     NSArray *sortedArray = [jogadores sortedArrayUsingDescriptors:sortDescriptors];
     //Imprimir Ranking
     printf("############# RANKING ###############\n\n");
-    printf("Melhor Pontuação           Nome\n");
+    printf("Melhor Pontuação           Nome          Nº Jogadas\n");
     for(int i=0; i < [jogadores count]; i++) {
         Jogador *aux = [sortedArray objectAtIndex: i];
         [aux ExibirRanking];
