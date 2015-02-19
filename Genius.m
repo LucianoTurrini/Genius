@@ -40,7 +40,7 @@
     [self clear];
     printf("##################################\r\n");
     printf("                                  \r\n");
-    printf(" Entre com seu usuário:           \r\n");
+    printf(" Entre com seu usuário:  ");
 
     char rawInput[50] = {0};
     scanf("%s", rawInput);
@@ -156,6 +156,10 @@
 -(BOOL)compare:(NSArray*)sequence withPlayerSequence:(NSArray*)playerSequence {
     for (int i = 0; i < [sequence count]; i++) {
         if ([sequence objectAtIndex:i] != [playerSequence objectAtIndex:i]) {
+            [self clear];
+            printf("\n\n#### GAME OVER! ####\n\n");
+            [self pressEnter];
+            [self clear];
             return false;
         }
     }
@@ -212,7 +216,6 @@
                 // EXIBIR MENSAGEM DE VITÓRIA
                 // REMOVER VETORES?
             } else {
-                // EXIBIR MENSAGEM DE DERROTA
                 // EXIBIR PONTUAÇÃO - VARIÁVEL turns
                 // ARMAZENAR PONTUAÇÃO DO JOGADOR E INCREMENTAR TENTATIVAS
                 gameOver = true;
@@ -223,7 +226,9 @@
         printf("##################################\r\n");
         printf("                                  \r\n");
         printf("Usuário não cadastrado!           \r\n");
-        printf("Faça seu cadastro antes de jogar. \r\n");
+        printf("Faça seu cadastro antes de jogar. \r\n\n");
+        [self pressEnter];
+        [self clear];
     }
 }
 
@@ -235,6 +240,8 @@
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     NSArray *sortedArray = [jogadores sortedArrayUsingDescriptors:sortDescriptors];
     //Imprimir Ranking
+    printf("############# RANKING ###############\n\n");
+    printf("Melhor Pontuação           Nome\n");
     for(int i=0; i < [jogadores count]; i++) {
         Jogador *aux = [sortedArray objectAtIndex: i];
         [aux ExibirRanking];

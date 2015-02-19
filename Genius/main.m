@@ -23,7 +23,7 @@ void PressEnter() {
 
 void ExibeMenu() {
     
-        printf("#############GENIUS###############\n");
+        printf("############# GENIUS ###############\n");
         printf("\n 1)Cadastrar usuario \n\n 2)Jogar \n\n 3)Exibir Ranking \n\n 0)Sair do Jogo" );
         printf("\n\n#################################\n");
         printf("\nEntre com o número da opcão desejada:");
@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]) {
         Jogador *jogador1 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User1"];
         [jogador1 setMelhorPont: @20]; [jogo addJogador:jogador1];
         Jogador *jogador2 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User2"];
-        [jogador2 setMelhorPont: @243]; [jogo addJogador:jogador2];
+        [jogador2 setMelhorPont: @80]; [jogo addJogador:jogador2];
         Jogador *jogador3 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User3"];
         [jogador3 setMelhorPont: @15]; [jogo addJogador:jogador3];
         
@@ -73,6 +73,7 @@ int main(int argc, const char * argv[]) {
                 
             case 1:
                 do {
+                    ClearTerminal();
                     printf("Digite um nome para o usuário.");
                     printf("\nNome:");
                     scanf("%s", str); // read and format into the str buffer
@@ -92,6 +93,7 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 3:
+                ClearTerminal();
                 [jogo ExibirRanking];
                 PressEnter();
                 ClearTerminal();
@@ -106,6 +108,6 @@ int main(int argc, const char * argv[]) {
             
         }  while (opcao != 0);
         
-        printf("\n\n####OBRIGADO!####\n\n");
+        printf("\n\n#### OBRIGADO! ####\n\n");
         return 0;
     }}

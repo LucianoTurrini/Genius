@@ -29,9 +29,9 @@
 }
 
 -(void)ExibirRanking {
-    printf("Nome: %s", [nome UTF8String]);
-    printf("      ");
-    printf("Melhor Pontuação: %s\n", [[melhorPont stringValue]lossyCString]);
+    printf("%s", [[melhorPont stringValue]lossyCString]);
+    printf("                         ");
+    printf("%s\n", [nome UTF8String]);
 }
 
 -(void)setPont:(NSNumber *)valor
