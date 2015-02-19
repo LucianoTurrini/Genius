@@ -35,7 +35,7 @@
 -(BOOL)compare:(NSArray*)sequence withPlayerSequence:(NSArray*)playerSequence;
 
 //-(void) CriarCores;
--(void) CriarSequencia : (NSString *)cor;
+//-(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;
 -(void) addJogador: (NSObject *) j;
 

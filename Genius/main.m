@@ -87,11 +87,8 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 2:
-                
                 [jogo playTutorial];
-                PressEnter();
                 [jogo start];
-                ClearTerminal();
                 break;
                 
             case 3:
