@@ -25,7 +25,7 @@
 -(NSString *)randomColour;
 -(NSString *)userLogin;
 -(void)playTutorial;
--(NSString *)showColour;
+-(NSString *)showColour:(int)turns;
 -(void)clear;
 -(void)start;
 -(void)pressEnter;

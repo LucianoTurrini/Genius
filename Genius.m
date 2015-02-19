@@ -146,13 +146,15 @@
     }
 }
 
--(NSString *)showColour {
+-(NSString *)showColour:(int)turns {
     NSString *colour = [self randomColour];
 
     printf("##################################\r\n");
     printf("                                  \r\n");
     printf("                                  \r\n");
     printf("                                  \r\n");
+    printf("\t ETAPA\r\n");
+    printf("\t\t%i\r\n", turns);
     printf("\t%s\r\n", [colour UTF8String]);
     printf("                                  \r\n");
     printf("                                  \r\n");
@@ -209,14 +211,19 @@
 
             for (int i = 0; i < turns; i++) {
                 [self clear];
-                int colour = [self convertColour:[self showColour]];
+                int colour = [self convertColour:[self showColour:(i + 1)]];
                 [sequence insertObject:[NSNumber numberWithInt:colour] atIndex:i];
                 [NSThread sleepForTimeInterval:1];
             }
 
             if ([self compare:sequence withPlayerSequence:[self retrievePlayerSequence:turns]]) {
                 turns++;
+                // EXIBIR MENSAGEM DE VITÓRIA
+                // REMOVER VETORES?
             } else {
+                // EXIBIR MENSAGEM DE DERROTA
+                // EXIBIR PONTUAÇÃO - VARIÁVEL turns
+                // ARMAZENAR PONTUAÇÃO DO JOGADOR E INCREMENTAR TENTATIVAS
                 gameOver = true;
             }
         } while (gameOver == false);
