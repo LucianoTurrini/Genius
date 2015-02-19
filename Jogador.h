@@ -25,6 +25,7 @@
 -(id) initWithPont:(NSNumber*)mP qtdJogadas:(NSNumber*)qtdJo pontAtual:(NSNumber*)pontA nome:(NSString*)n;
 -(void)ExibirRanking;
 -(void)setPont:(NSNumber *)valor;
+-(void)setPontAtu:(NSNumber *)valor;
 
 
 @end

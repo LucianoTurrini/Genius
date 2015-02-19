@@ -220,16 +220,15 @@
                 for (int i = 0; i < [jogadores count]; i++) {
                     Jogador *jog = [jogadores objectAtIndex:i];
                     if ([[jog nome] isEqualToString:user]) {
-                        [jog setPontAtual: pontos];
+                        [jog setPontAtu: pontos];
                         
                         if([jog pontAtual] > [jog melhorPont])
-                            [jog setMelhorPont: pontos];
+                            [jog setPont: pontos];
                         
                         [jogadores insertObject:jog atIndex:i];
                     }
                 }
-                
-                printf("Correto! - %f pontos", pontos);
+                printf("Correto! - %s Pontos" , [[pontos stringValue]lossyCString]);
                 [NSThread sleepForTimeInterval:1.25];
                 [self clear];
                 

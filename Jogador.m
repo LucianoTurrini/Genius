@@ -39,6 +39,12 @@
     melhorPont=valor;
 }
 
+-(void)setPontAtu:(NSNumber *)pA
+{
+    pontAtual=pA;
+}
+
+
 
 @end
 

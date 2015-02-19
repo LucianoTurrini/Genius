@@ -78,7 +78,7 @@ int main(int argc, const char * argv[]) {
                     printf("\nNome:");
                     scanf("%s", str); // read and format into the str buffer
                     Nome = [NSString stringWithUTF8String:str];
-                    printf("Seu nome é %s ?\n", [Nome UTF8String]);
+                    printf("\nSeu nome é %s ?\n", [Nome UTF8String]);
                     printf("1) Sim \n2) Não\n");
                     scanf("%i",&opcao);
                     jogador = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:Nome];
