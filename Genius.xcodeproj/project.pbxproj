@@ -31,6 +31,7 @@
 		2192CF481A8E2AA000640EE1 /* Jogador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogador.m; sourceTree = "<group>"; };
 		2192CF4A1A8E2AAE00640EE1 /* Genius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genius.h; sourceTree = "<group>"; };
 		2192CF4B1A8E2AAE00640EE1 /* Genius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Genius.m; sourceTree = "<group>"; };
+		D6D38BF61A9679E300E81AE7 /* RESPOSTA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RESPOSTA.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 		2192CF341A8E2A7E00640EE1 = {
 			isa = PBXGroup;
 			children = (
+				D6D38BF61A9679E300E81AE7 /* RESPOSTA.txt */,
 				2192CF471A8E2AA000640EE1 /* Jogador.h */,
 				2192CF481A8E2AA000640EE1 /* Jogador.m */,
 				2192CF4A1A8E2AAE00640EE1 /* Genius.h */,

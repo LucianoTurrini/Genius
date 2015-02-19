@@ -1,0 +1,2 @@
+
+Foi utilizado fila na construção do projeto. Sua escolha fora feita com o intuito de ter uma estrutura que atendesse a necessidade de enfileirar elementos.
