@@ -208,7 +208,7 @@
                 [self clear];
                 int colour = [self convertColour:[self showColour:(i + 1)]];
                 [sequence insertObject:[NSNumber numberWithInt:colour] atIndex:i];
-                [NSThread sleepForTimeInterval:1.5];
+                [NSThread sleepForTimeInterval:1.25];
             }
 
             if ([self compare:sequence withPlayerSequence:[self retrievePlayerSequence:turns]]) {
@@ -220,14 +220,10 @@
                 for (int i = 0; i < [jogadores count]; i++) {
                     Jogador *jog = [jogadores objectAtIndex:i];
                     if ([[jog nome] isEqualToString:user]) {
-                        [jog setPontAtual: pontos];
-                        NSNumber *a1 = pontos;
-                        NSNumber *a2 = [jog melhorPont];
-                        // IF NAO FUNCIONA
-                        if(a1 > a2){
-                            [jog setMelhorPont: pontos];
-                        }
-                        NSLog(@"%@", [jog melhorPont]);
+                        [jog setPontAtu: pontos];
+                        
+                        if([jog pontAtual] > [jog melhorPont])
+                            [jog setPont: pontos];
                         
                         //[jogadores insertObject:jog atIndex:i];
                     }
