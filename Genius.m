@@ -222,8 +222,8 @@
                     Jogador *jog = [jogadores objectAtIndex:i];
                     if ([[jog nome] isEqualToString:user]) {
                         [jog setPontAtual: pontos];
-                        NSNumber *a1 = pontos;
-                        NSNumber *a2 = [jog melhorPont];
+                        int a1 = [pontos intValue];
+                        int a2 = [[jog melhorPont] intValue];
                         // IF NAO FUNCIONA
                         if(a1 > a2){
                             [jog setMelhorPont: pontos];
