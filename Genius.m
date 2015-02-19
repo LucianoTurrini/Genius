@@ -63,12 +63,14 @@
     char rawInput[50] = {0};
     scanf("%s", rawInput);
     NSString *user = [NSString stringWithUTF8String:rawInput];
-
-    if ([jogadores containsObject:user]) {
-        return user;
-    } else {
-        return nil;
+    
+    for (int i = 0; i < [jogadores count]; i++) {
+        if ([[[jogadores objectAtIndex:i] nome] isEqualToString:user]) {
+            return user;
+        }
     }
+
+    return nil;
 }
 
 -(void)playTutorial {
@@ -83,8 +85,8 @@
     printf("mesma ordem usando os números para\r\n");
     printf("indicar as cores:                 \r\n");
     printf("                                  \r\n");
-    printf("\t1 - AZUL                        \r\n");
-    printf("\t2 - AMARELO                     \r\n");
+    printf("\t1 - AMARELO                     \r\n");
+    printf("\t2 - AZUL                        \r\n");
     printf("\t3 - VERDE                       \r\n");
     printf("\t4 - VERMELHO                    \r\n");
     printf("                                  \r\n");
@@ -161,7 +163,7 @@
 }
 
 -(BOOL)compare:(NSArray*)sequence withPlayerSequence:(NSArray*)playerSequence {
-    for (int i = 0; i < sizeof sequence; i++) {
+    for (int i = 0; i < [sequence count]; i++) {
         if ([sequence objectAtIndex:i] != [playerSequence objectAtIndex:i]) {
             return false;
         }
@@ -172,13 +174,20 @@
 -(NSMutableArray *)retrievePlayerSequence:(int)turns {
     int rawColour;
     NSMutableArray *playerSequence;
+    playerSequence = [[NSMutableArray alloc]init];
 
     [self clear];
     printf("##################################\r\n");
     printf("                                  \r\n");
+    printf("\t1 - AMARELO                     \r\n");
+    printf("\t2 - AZUL                        \r\n");
+    printf("\t3 - VERDE                       \r\n");
+    printf("\t4 - VERMELHO                    \r\n");
+    printf("                                  \r\n");
+    printf("##################################\r\n");
 
     for (int n = 0; n < turns; n++) {
-        printf("\tCOR %i: ", n);
+        printf("\tCOR %i: ", n + 1);
         scanf("%i", &rawColour);
         [playerSequence insertObject:[NSNumber numberWithInt:rawColour ] atIndex:n];
     }
@@ -190,18 +199,19 @@
     // be stored in a array for later comparison with
     // the player's try.
     // They also represent user points.
-    int turns = 5;
+    int turns = 4;
     NSString *user = [self userLogin];
     
     if (user) {
         do {
             NSMutableArray *sequence;
+            sequence = [[NSMutableArray alloc]init];
 
             for (int i = 0; i < turns; i++) {
                 [self clear];
                 int colour = [self convertColour:[self showColour]];
                 [sequence insertObject:[NSNumber numberWithInt:colour] atIndex:i];
-                [NSThread sleepForTimeInterval:0.3];
+                [NSThread sleepForTimeInterval:1];
             }
 
             if ([self compare:sequence withPlayerSequence:[self retrievePlayerSequence:turns]]) {
