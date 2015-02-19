@@ -45,6 +45,14 @@ int main(int argc, const char * argv[]) {
         Jogador *jogador = [[Jogador alloc] init];
         Genius *jogo = [[Genius alloc] initWithJogadores:jogadores];
 
+        //Jogadores teste
+        Jogador *jogador1 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User1"];
+        [jogador1 setMelhorPont: @20]; [jogo addJogador:jogador1];
+        Jogador *jogador2 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User2"];
+        [jogador2 setMelhorPont: @243]; [jogo addJogador:jogador2];
+        Jogador *jogador3 = [[Jogador alloc] initWithPont:@0 qtdJogadas:@0 pontAtual:@0 nome:@"User3"];
+        [jogador3 setMelhorPont: @15]; [jogo addJogador:jogador3];
+        
         char str[50] = {0};
         NSString *Nome;
         

@@ -30,7 +30,7 @@
 -(void)start;
 -(BOOL)try:(NSMutableArray *)sequencia;
 
--(void) CriarCores;
+//-(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;
 -(void) ExibirRanking;
 -(void) addJogador: (NSObject *) j;
