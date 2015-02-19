@@ -34,15 +34,6 @@
     printf("%s\n", [nome UTF8String]);
 }
 
--(void)setPont:(NSNumber *)valor
-{
-    melhorPont=valor;
-}
-
--(void)setPontAtu:(NSNumber *)pA
-{
-    pontAtual=pA;
-}
 
 
 
