@@ -198,6 +198,7 @@
     // They also represent user points.
     int turns = 4;
     NSString *user = [self userLogin];
+    gameOver = false;
     
     if (user) {
         do {
