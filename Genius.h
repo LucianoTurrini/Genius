@@ -28,7 +28,11 @@
 -(NSString *)showColour;
 -(void)clear;
 -(void)start;
--(BOOL)try:(NSMutableArray *)sequencia;
+-(void)pressEnter;
+-(NSMutableArray *)retrievePlayerSequence:(int)turns;
+-(int)convertColour:(NSString *)colour;
+
+-(BOOL)compare:(NSArray*)sequence withPlayerSequence:(NSArray*)playerSequence;
 
 -(void) CriarCores;
 -(void) CriarSequencia : (NSString *)cor;

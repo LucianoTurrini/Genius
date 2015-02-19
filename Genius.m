@@ -39,6 +39,17 @@
     
 }
 
+//Esperar Enter do usuario para prosseguir
+-(void)pressEnter {
+    printf("##################################\r\n");
+    printf("Aperte ENTER para continuar...");
+    int c = getchar();
+    if (c != EOF) {
+        putchar(c);
+        c = getchar();
+    }
+}
+
 -(NSString *)userLogin {
     [self clear];
     printf("##################################\r\n");
@@ -73,12 +84,18 @@
     printf("\t3 - VERDE                       \r\n");
     printf("\t4 - VERMELHO                    \r\n");
     printf("                                  \r\n");
+    printf("Exemplo:                          \r\n");
+    printf("Digite \"14223\" quando a         \r\n");
+    printf("sequência foi: AZUL, VERMELHO     \r\n");
+    printf("AMARELO, AMARELO E VERDE          \r\n");
+    printf("                                  \r\n");
     printf("Para uma melhor experiência,      \r\n");
     printf("ajuste sua janela de acordo com os\r\n");
     printf("limites dessa tela.               \r\n");
     printf("Boa sorte!                        \r\n");
     printf("                                  \r\n");
     printf("##################################\r\n");
+    [self pressEnter];
 }
 -(NSString *)randomColour {
     NSString *colour;
@@ -100,6 +117,21 @@
     }
 
     return colour;
+}
+
+-(int)convertColour:(NSString *)colour {
+    int colourCode;
+    if ([colour isEqualToString:@"AMARELO"]) {
+        colourCode = 1;
+    } else if ([colour isEqualToString:@"AZUL"]) {
+        colourCode = 2;
+    } else if ([colour isEqualToString:@"VERDE"]) {
+        colourCode = 3;
+    } else {
+        colourCode = 4;
+    }
+    
+    return colourCode;
 }
 
 -(void)clear {
@@ -124,8 +156,29 @@
     return colour;
 }
 
--(BOOL)try:(NSMutableArray *)sequencia {
-    
+-(BOOL)compare:(NSArray*)sequence withPlayerSequence:(NSArray*)playerSequence {
+    for (int i = 0; i < sizeof sequence; i++) {
+        if ([sequence objectAtIndex:i] != [playerSequence objectAtIndex:i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+-(NSMutableArray *)retrievePlayerSequence:(int)turns {
+    int rawColour;
+    NSMutableArray *playerSequence;
+
+    [self clear];
+    printf("##################################\r\n");
+    printf("                                  \r\n");
+
+    for (int n = 0; n < turns; n++) {
+        printf("\tCOR %i: ", n);
+        scanf("%i", &rawColour);
+        [playerSequence insertObject:[NSNumber numberWithInt:rawColour ] atIndex:i];
+    }
+    return playerSequence;
 }
 
 -(void)start {
@@ -138,18 +191,20 @@
     
     if (user) {
         do {
-            NSString *colourSequence[turns];
+            NSMutableArray *sequence;
 
             for (int i = 0; i < turns; i++) {
                 [self clear];
-                colourSequence[i] = [self showColour];
+                int colour = [self convertColour:[self showColour]];
+                [sequence insertObject:[NSNumber numberWithInt:colour] atIndex:i];
                 [NSThread sleepForTimeInterval:0.3];
             }
 
-            // playerTry
-            // if fail -> gameOver = true
-            // else -> increase turn
-            turns++;
+            if ([self compare:sequence withPlayerSequence:[self retrievePlayerSequence:turns]]) {
+                turns++;
+            } else {
+                gameOver = true;
+            }
         } while (gameOver == false);
     } else {
         [self clear];
